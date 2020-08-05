@@ -52,6 +52,10 @@ Docker image push
 	kubectl create deploy management --image=496278789073.dkr.ecr.ap-northeast-2.amazonaws.com/management:v1
 	kubectl create deploy gateway --image=496278789073.dkr.ecr.ap-northeast-2.amazonaws.com/gateway:v1
 	
+	
+	kubectl set image deploy reservation reservation=496278789073.dkr.ecr.ap-northeast-2.amazonaws.com/reservation:v2
+	
+	
 	kubectl expose deploy reservation --type=ClusterIP --port=8080
 	kubectl expose deploy payment --type=ClusterIP --port=8080
 	kubectl expose deploy management --type=ClusterIP --port=8080
